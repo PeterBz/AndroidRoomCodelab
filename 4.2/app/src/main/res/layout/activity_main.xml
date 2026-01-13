@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnNewWorkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Neues Workout starten (Heute)" />
+
+    <EditText
+        android:id="@+id/etExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Übung (z.B. Bankdrücken)" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="kg" />
+
+        <EditText
+            android:id="@+id/etReps"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Wdh." />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAddSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Satz hinzufügen"
+        android:enabled="false" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datenbank Inhalt:"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvDatabaseOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Noch keine Daten..."
+            android:textSize="16sp" />
+    </ScrollView>
+
+</LinearLayout>
