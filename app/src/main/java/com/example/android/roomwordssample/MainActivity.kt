@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var wordViewModel: WordViewModel
 
-    // DIES IST NEU: Der "Launcher", der auf das Ergebnis der Eingabe wartet
+    // Der "Launcher", der auf das Ergebnis der Eingabe wartet
     private val newWordActivityLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
-            // HIER STARTEN WIR JETZT DIE EINGABE-SEITE
+            // HIER STARTET DIE EINGABE-SEITE
             val intent = Intent(this@MainActivity, NewWordActivity::class.java)
             newWordActivityLauncher.launch(intent)
         }
